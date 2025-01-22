@@ -40,11 +40,11 @@ services:
       - gateway
     labels:
       - traefik.enable=true
-      - traefik.http.routers.curlip.entrypoints=https
-      - traefik.http.routers.curlip.rule=Host(`ip.example.com`)
-      - traefik.http.routers.curlip.tls.certresolver=le
-      - traefik.http.routers.curlip.tls.domains[0].main=ip.example.com
-      - traefik.http.services.curlip.loadbalancer.server.port=5000
+      - traefik.http.routers.whatsmyip.entrypoints=https
+      - traefik.http.routers.whatsmyip.rule=Host(`ip.example.com`)
+      - traefik.http.routers.whatsmyip.tls.certresolver=le
+      - traefik.http.routers.whatsmyip.tls.domains[0].main=ip.example.com
+      - traefik.http.services.whatsmyip.loadbalancer.server.port=5000
       # Watchtower autoupdate
       - com.centurylinklabs.watchtower.enable=true
 
