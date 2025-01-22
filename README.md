@@ -7,7 +7,7 @@ $ curl https://ip.example.com
 {"ip":"1.2.3.4"}
 ```
 
-## Example Usage with docker-compose.yml
+## Example usage with docker-compose.yml
 
 ```
 services:
