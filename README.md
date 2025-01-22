@@ -23,9 +23,10 @@ services:
           memory: 128m
 
   web:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    #build:
+    #  context: .
+    #  dockerfile: ./Dockerfile
+    image: ghcr.io/papamoose/whatsmyip:latest
     container_name: "whatsmyip"
     hostname: "whatsmyip"
     restart: unless-stopped
