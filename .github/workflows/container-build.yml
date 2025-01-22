@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-  #schedule:
-  #  - cron: "0 0 * * 2"
-  #tags:
-  #  - "v[0-9]+.*"
+  schedule:
+    - cron: "0 0 * * 2"
+  tags:
+    - "v*"
   #workflow_dispatch:
 
 jobs:
