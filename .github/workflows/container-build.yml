@@ -1,10 +1,16 @@
 ---
+
 name: Build Docker Image
 
 on:
   schedule:
     - cron: "0 0 * * 2" # Runs weekly at midnight every Tuesday
   workflow_dispatch: # Allows manual triggering of the workflow
+  push: # Trigger on push to any branch
+    branches:
+      - main
+  tags: # Trigger on new tags
+    - "v[0-9]+.*"
 
 jobs:
   build:
@@ -32,3 +38,4 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/your-image-name:latest
           platforms: linux/amd64,linux/arm64
+
