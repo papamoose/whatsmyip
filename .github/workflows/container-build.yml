@@ -7,14 +7,14 @@ permissions:
   id-token: write
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     - cron: "0 0 * * 2"
-  #workflow_dispatch:
+  workflow_dispatch:
   #tags:
   #  - "v*"
+  #push:
+  #  branches:
+  #    - main
 
 env:
   REGISTRY: ghcr.io
